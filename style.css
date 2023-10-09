@@ -3,6 +3,7 @@ body{
 }
 
 .bloc{
+    display: inline-block;
     width: 200px;
     height: 200px;
     text-align: center;
@@ -12,4 +13,11 @@ body{
     color: white;
     background-color: black;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    transition: transform 0.2s; /* Ajout d'une transition pour une animation fluide */
+}
+
+.bloc-hover {
+    transform: translateY(-5px); /* Surélévation de 5 pixels vers le haut */
 }
