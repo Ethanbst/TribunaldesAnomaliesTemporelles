@@ -2,10 +2,12 @@ body{
     background-color: #e1621d;
 }
 
-h{
+#titre_bloc{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    margin: 10px;
+    margin:auto;
+    color: #ffbc93;
+    font-size: 20px;
 }
 
 .bloc{
@@ -13,7 +15,7 @@ h{
     height:fit-content;
     text-align:justify;
     padding: 10px;
-    margin: 10px auto;
+    margin: 30px auto;
     color: white;
     background-color: #5f2c14;
     border-radius: 10px;
@@ -29,7 +31,12 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 10px;
-    
+    color: #ffbc93;
+  
+}
+
+a{
+    text-decoration: none;
 }
 
 .bloc_titre{
@@ -37,7 +44,7 @@ h1{
     height:fit-content;
     text-align:justify;
     padding: 10px;
-    margin: 10px auto;
+    margin: 30px auto;
     color: white;
     background-color: #5f2c14;
     border-radius: 10px;
