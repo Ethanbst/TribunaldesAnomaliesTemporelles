@@ -10,6 +10,17 @@ body{
     font-size: 20px;
 }
 
+html {
+    scroll-behavior: smooth; /*Lissage du scrolling de la page*/
+}
+
+
+a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+
 .bloc{
     max-width: 70%;
     width:100%;
@@ -24,21 +35,19 @@ body{
     transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
 }
 
+
 .bloc-hover {
     transform: translateY(-10px); /* Surélévation de 5 pixels vers le haut */
 }
+
 
 h1{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 10px;
     color: #ffbc93;
-  
 }
 
-a{
-    text-decoration: none;
-}
 
 .bloc_titre{
     width:fit-content;
@@ -53,9 +62,10 @@ a{
     transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
 }
 
+
 .bouton_lien {
-    position:fixed;
-    right: 20px;
+    position: absolute;
+    right: 25px;
     top:15px;
     background-color: #e57940;
     border: 3px solid #5f2c14;
@@ -71,6 +81,14 @@ a{
     transition: transform 0.3s; /* Ajout d'une transition pour une animation fluide */
 }
 
+
 .bouton_lien_hover{
     transform:scale(1.1);
+}
+
+.logo_site{
+    display: flex;
+    position:center;
+    top: -10px;
+    justify-content: center; /* Centre horizontalement */
 }
