@@ -11,7 +11,8 @@ body{
 }
 
 .bloc{
-    width:fit-content;
+    max-width: 70%;
+    width:100%;
     height:fit-content;
     text-align:justify;
     padding: 10px;
@@ -20,7 +21,7 @@ body{
     background-color: #5f2c14;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s; /* Ajout d'une transition pour une animation fluide */
+    transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
 }
 
 .bloc-hover {
@@ -49,5 +50,27 @@ a{
     background-color: #5f2c14;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s; /* Ajout d'une transition pour une animation fluide */
+    transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
+}
+
+.bouton_lien {
+    position:fixed;
+    right: 20px;
+    top:15px;
+    background-color: #e57940;
+    border: 3px solid #5f2c14;
+    border-radius: 5px;
+    padding:3px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    scale: 1.2;
+    transition: transform 0.3s; /* Ajout d'une transition pour une animation fluide */
+}
+
+.bouton_lien_hover{
+    transform:scale(1.1);
 }
