@@ -74,3 +74,17 @@ a{
 .bouton_lien_hover{
     transform:scale(1.1);
 }
+
+.bouton_commit {
+    position: relative;
+    align-self:center;
+    top:10px;
+    border-radius: 5px;
+    padding:5px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:15px;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+}
