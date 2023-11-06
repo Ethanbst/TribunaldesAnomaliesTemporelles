@@ -72,3 +72,9 @@ function validateLogin() {
         document.getElementById("errorText").textContent = "Identifiant ou mot de passe incorrect.";
     }
 }
+
+        // Attendez 5 secondes avant de masquer l'écran de chargement
+        setTimeout(function() {
+            var loader = document.getElementById('loader');
+            loader.style.display = 'none';
+        }, 5000); // 5000 millisecondes (5 secondes)
