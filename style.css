@@ -122,16 +122,16 @@ h1{
 
 /*Style page login*/
 .bloc_login{
+    position: relative;
+    top: 200px;
     justify-content: center;
-    width:300px;
-    padding: 10px;
+    width:270px;
+    padding: 30px;
     margin: 30px auto;
     color: white;
     background-color: #5f2c14;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
-    flex-direction: column;
     text-align: center;
 }
 
