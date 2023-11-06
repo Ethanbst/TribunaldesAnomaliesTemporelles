@@ -58,8 +58,8 @@ function validateLogin() {
 
     // Exemple : Paires identifiant-mot de passe valides
     var validCredentials = {
-        "ethan": "1234",
-        "utilisateur2": "motdepasse2",
+        "ethan": "22104587",
+        "admin": "admin",
         "utilisateur3": "motdepasse3"
     };
 

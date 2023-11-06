@@ -2,6 +2,13 @@ body{
     background-color: #e1621d;
 }
 
+#imgtva{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+}
+
 #titre_bloc{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -62,22 +69,26 @@ h1{
     transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
 }
 
+#bouton_login{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration:none;
+    font-size: 16px;
+    color: white;
+}
 
 .bouton_lien {
     position: absolute;
     right: 25px;
     top:15px;
-    background-color: #e57940;
-    border: 3px solid #5f2c14;
-    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+    background-color: #5f2c14;
+    border: none;
+    border-radius: 20px;
     padding:3px;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: small;
-    text-align: center;
-    text-decoration: none;
     cursor:pointer;
     scale: 1.2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);;
     transition: transform 0.3s; /* Ajout d'une transition pour une animation fluide */
 }
 
