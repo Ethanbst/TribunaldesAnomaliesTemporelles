@@ -42,3 +42,33 @@ bt1.forEach(bouton_lien => {
         bouton_lien.classList.remove('bouton_lien_hover');
     });
 });
+
+
+function validateLogin() {
+    console.log("Fonction validateLogin appelée");
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Vérifiez d'abord si les champs sont remplis
+    if (username.trim() === "" || password.trim() === "") {
+        // Affichez un message d'erreur si les champs sont vides
+        document.getElementById("errorText").textContent = "Veuillez remplir tous les champs.";
+        return; // Arrêtez la fonction si les champs ne sont pas remplis
+    }
+
+    // Exemple : Paires identifiant-mot de passe valides
+    var validCredentials = {
+        "ethan": "1234",
+        "utilisateur2": "motdepasse2",
+        "utilisateur3": "motdepasse3"
+    };
+
+    if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+        // Authentification réussie, redirigez l'utilisateur vers la page souhaitée
+        console.log("Redirection effectuée");
+        window.location.href = "index.html";
+    } else {
+        // Affichez un message d'erreur
+        document.getElementById("errorText").textContent = "Identifiant ou mot de passe incorrect.";
+    }
+}
