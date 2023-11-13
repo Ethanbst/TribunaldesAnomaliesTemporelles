@@ -81,7 +81,7 @@ function validateLogin() { //Action du bouton login
 }
 
         // Attendez 5 secondes avant de masquer l'écran de chargement
-        setTimeout(function() {
-            var loader = document.getElementById('loader');
-            loader.style.display = 'none';
-        }, 1000); // 5000 millisecondes (5 secondes)
+setTimeout(function() {
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
+    }, 500); // 5000 millisecondes (5 secondes)

@@ -105,26 +105,12 @@ h1{
     justify-content: center; /* Centre horizontalement */
 }
 
-.bouton_commit {
-    position: relative;
-    align-self:center;
-    top:10px;
-    border-radius: 5px;
-    padding:5px;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:15px;
-    text-align: center;
-    text-decoration: none;
-    cursor:pointer;
-
-}
 
 /*Style page login*/
 .bloc_login{
     position: relative;
     top: 200px;
-    justify-content: center;
+    /*justify-content: center;*/
     width:270px;
     padding: 30px;
     margin: 30px auto;
@@ -132,18 +118,44 @@ h1{
     background-color: #5f2c14;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    /*text-align: center;*/
 }
 
+.bouton_commit { /*Bouton login*/
+    position:relative;
+    padding:5px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:15px;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    display: block;
+    top: 8px;
+    margin: 0 auto;
+
+}
+
+#password{
+    position: relative;
+    left: 43px;
+}
+
+#username{
+    position: relative;
+    left: 43px;
+}
 
 .form-group{
-    justify-items: center;
+    /*justify-items: center;*/
     margin: 10px;
 }
 
 
 .form-group i{
-    transform: translateY(10%);
+    position: relative;
+    left: +43px;
+    top: +2px;
 }
 
 
