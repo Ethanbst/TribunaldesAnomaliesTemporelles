@@ -136,6 +136,10 @@ h1{
 
 }
 
+#errorText{
+    text-align: center;
+}
+
 #password{
     position: relative;
     left: 43px;
