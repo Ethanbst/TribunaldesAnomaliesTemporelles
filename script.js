@@ -44,7 +44,14 @@ bt1.forEach(bouton_lien => {
 });
 
 
-function validateLogin() {
+document.addEventListener("keypress", function(e) { //Si touche entrer pressée on active active la fonction de validation des id
+    if (e.key === "Enter") {
+        validateLogin();
+    }
+});
+
+
+function validateLogin() { //Action du bouton login
     console.log("Fonction validateLogin appelée");
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -77,4 +84,4 @@ function validateLogin() {
         setTimeout(function() {
             var loader = document.getElementById('loader');
             loader.style.display = 'none';
-        }, 5000); // 5000 millisecondes (5 secondes)
+        }, 1000); // 5000 millisecondes (5 secondes)
