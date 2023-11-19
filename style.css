@@ -9,8 +9,18 @@ body{
     width: 150px;
 }
 
-#titre_bloc{
+.p{
     font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10px;
+    color: #ffbc93;
+}
+
+#titre_bloc{
     text-align: center;
     margin:auto;
     color: #ffbc93;
@@ -48,12 +58,7 @@ a{
 }
 
 
-h1{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    margin: 10px;
-    color: #ffbc93;
-}
+
 
 
 .bloc_titre{
@@ -214,4 +219,55 @@ input{
     position: fixed;
     transform:translateY(40px)
 
+}
+
+/*Style du menu d'actualités*/
+
+section {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    overflow-y: auto; /* Ajout de l'overflow-y pour permettre le défilement vertical si nécessaire */
+    max-height: 230px; /* Définissez la hauteur maximale à partir de laquelle le défilement est activé */
+
+}
+
+article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.actualite{
+    position: absolute;
+    right: 2%;
+    background-color: rgb(180, 128, 128);
+    width:fit-content;
+    height: fit-content;
+    border-radius: 10px;
+
+}
+
+.bloc_info{
+    transform: translateY(-15px);
+    width:300px;
+    height:fit-content;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #5f2c14;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
+}
+
+.titre_actualite{
+    text-align: center;
+    font-size: 22px;
+    color:  #ffbc93;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.texte_actualite{
+    color: white;
 }

@@ -91,4 +91,4 @@ function validateLogin() { //Action du bouton login
 setTimeout(function() {
         var loader = document.getElementById('loader');
         loader.style.display = 'none';
-    }, aleatoire()); // 5000 millisecondes (5 secondes)
+    }, /*aleatoire()*/0); // temps de chargement en millisecondes aléatoire
