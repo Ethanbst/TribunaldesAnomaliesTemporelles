@@ -228,15 +228,15 @@ input{
 }
 
 #loader-text {
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     text-align: center;
 }
 
 #loading_gif{
-    width: 40px;
+    width: 100px;
     position: fixed;
-    transform:translateY(40px)
+    transform:translateY(80px)
 
 }
 
