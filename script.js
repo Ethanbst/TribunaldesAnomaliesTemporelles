@@ -80,8 +80,15 @@ function validateLogin() { //Action du bouton login
     }
 }
 
+    function aleatoire(){ //Génère un chiffre aléatoire entre 100 et 500
+        var alea;
+        alea = Math.floor(Math.random() * (1500 + 1));;
+        console.log(alea);
+        return alea; 
+    }
+
         // Attendez 5 secondes avant de masquer l'écran de chargement
 setTimeout(function() {
         var loader = document.getElementById('loader');
         loader.style.display = 'none';
-    }, 500); // 5000 millisecondes (5 secondes)
+    }, /*aleatoire()*/0); // temps de chargement en millisecondes aléatoire
