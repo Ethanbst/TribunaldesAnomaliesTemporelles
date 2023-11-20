@@ -1,6 +1,5 @@
 body{
     background-color: #e1621d;
-
     /*Style de la barre de scroll de la page*/
     &::-webkit-scrollbar {
         width: 10px; /* Largeur de la barre de défilement */
@@ -279,17 +278,15 @@ article {
     }
 
     /*Style du bloc*/
-    position: absolute;
-    right: 2%;
     background-color: rgb(180, 128, 128);
     width:fit-content;
     height: fit-content;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 .bloc_info{
-    
     transform: translateY(-15px);
     width:300px;
     height:fit-content;
@@ -297,7 +294,7 @@ article {
     margin: 20px auto;
     background-color: #5f2c14;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgb(180, 128, 128);
     transition: transform 1s; /* Ajout d'une transition pour une animation fluide */
 }
 
