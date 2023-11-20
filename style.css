@@ -58,6 +58,7 @@ a{
 
 
 .bloc{
+    font-size: 18px;
     max-width: 500px;
     width:100%;
     height:fit-content;
@@ -81,6 +82,7 @@ a{
 
 
 .bloc_titre{
+    font-size: 18px;
     width:fit-content;
     height:fit-content;
     text-align:justify;
