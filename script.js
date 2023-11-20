@@ -108,4 +108,23 @@ async function validateLogin() { //Action du bouton login
     setTimeout(function() {
         var loader = document.getElementById('loader');
         loader.style.display = 'none';
+    },/*aleatoire()*/); // temps de chargement en millisecondes aléatoire
+
+
+// Fonction pour hacher une chaîne
+async function hashString(inputString) {
+    // Convertir la chaîne en ArrayBuffer
+    const encoder = new TextEncoder();
+    const data = encoder.encode(inputString);
+
+    // Calculer le hachage SHA-256
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+    // Convertir le résultat en une chaîne hexadécimale
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashedValue = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    //console.log(inputString + "=" + hashedValue);
+    return hashedValue;
+  }
+
     }, aleatoire()); // temps de chargement en millisecondes aléatoire
