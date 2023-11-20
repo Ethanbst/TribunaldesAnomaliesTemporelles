@@ -78,9 +78,6 @@ a{
 }
 
 
-
-
-
 .bloc_titre{
     font-size: 18px;
     width:fit-content;
@@ -127,8 +124,9 @@ a{
 .logo_site{
     display: flex;
     position:relative;
-    top: -30px;
+    top: -10px;
     justify-content: center; /* Centre horizontalement */
+    margin: 50px;
 }
 
 
@@ -341,6 +339,6 @@ article {
 
 .div_bouton_lancement{
     position: relative;
-    margin: 10%;
+    margin: 80px;
     text-align: center;
 }
