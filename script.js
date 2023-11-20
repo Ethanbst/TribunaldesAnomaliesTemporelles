@@ -32,7 +32,7 @@ blocs2.forEach(bloc_titre => {
 
 const bt1 = document.querySelectorAll('.bouton_lien');
 
-// Parcourez chaque élément et ajoutez des gestionnaires d'événements pour "hover"
+// Animation du buton login
 bt1.forEach(bouton_lien => {
     bouton_lien.addEventListener('mouseenter', () => {
         bouton_lien.classList.add('bouton_lien_hover');
@@ -40,6 +40,19 @@ bt1.forEach(bouton_lien => {
 
     bouton_lien.addEventListener('mouseleave', () => {
         bouton_lien.classList.remove('bouton_lien_hover');
+    });
+});
+
+// Animation du buton de lancement
+const bt2 = document.querySelectorAll('.bouton_lancement_lien');
+
+bt2.forEach(bouton_lancement_lien => {
+    bouton_lancement_lien.addEventListener('mouseenter', () => {
+        bouton_lancement_lien.classList.add('bouton_lancement_lien_hover');
+    });
+
+    bouton_lancement_lien.addEventListener('mouseleave', () => {
+        bouton_lancement_lien.classList.remove('bouton_lancement_lien_hover');
     });
 });
 
@@ -51,10 +64,15 @@ document.addEventListener("keypress", function(e) { //Si touche entrer pressée 
 });
 
 
-function validateLogin() { //Action du bouton login
+async function validateLogin() { //Action du bouton login
     console.log("Fonction validateLogin appelée");
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = document.getElementById("username").value; //On récupère l'id dans username
+    var password = document.getElementById("password").value; //On récupère le mot de passe dans password
+
+    const username_hash = await hashString(username); //On récupère notre username haché
+    //console.log("Username hash = " + username_hash);
+    const password_hash = await hashString(password); //On récupère notre password haché
+    //console.log("Password hash = " + password_hash);
 
     // Vérifiez d'abord si les champs sont remplis
     if (username.trim() === "" || password.trim() === "") {
@@ -65,15 +83,14 @@ function validateLogin() { //Action du bouton login
 
     // Exemple : Paires identifiant-mot de passe valides
     var validCredentials = {
-        "ethan": "22104587",
-        "admin": "admin",
-        "utilisateur3": "motdepasse3"
+        "7b8bd6c0abf53d22888beafc48830e1156907dd4ec7e6ea31e55a0dd6dc5a969": "7b42f2112fc150f2f9481a027e2c6666df2b9f3fc4851d05bd1b891d15d2f12b",
+        "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
     };
 
-    if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+    if (validCredentials.hasOwnProperty(username_hash) && validCredentials[username_hash] === password_hash) {
         // Authentification réussie, redirigez l'utilisateur vers la page souhaitée
         console.log("Redirection effectuée");
-        window.location.href = "index.html";
+        //window.location.href = "index.html";
     } else {
         // Affichez un message d'erreur
         document.getElementById("errorText").textContent = "Identifiant ou mot de passe incorrect.";
@@ -88,7 +105,23 @@ function validateLogin() { //Action du bouton login
     }
 
         // Attendez 5 secondes avant de masquer l'écran de chargement
-setTimeout(function() {
+    setTimeout(function() {
         var loader = document.getElementById('loader');
         loader.style.display = 'none';
-    }, aleatoire()); // temps de chargement en millisecondes aléatoire
+      }, /*aleatoire()*/); // temps de chargement en millisecondes aléatoire
+
+// Fonction pour hacher une chaîne
+async function hashString(inputString) {
+    // Convertir la chaîne en ArrayBuffer
+    const encoder = new TextEncoder();
+    const data = encoder.encode(inputString);
+
+    // Calculer le hachage SHA-256
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+    // Convertir le résultat en une chaîne hexadécimale
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashedValue = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    //console.log(inputString + "=" + hashedValue);
+    return hashedValue;
+  }

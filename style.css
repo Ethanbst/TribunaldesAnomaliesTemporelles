@@ -312,3 +312,32 @@ article {
 .texte_actualite{
     color: white;
 }
+
+/* STYLE PAGE ACCUEIL*/
+#bouton_lancement{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration:none;
+    font-size: 16px;
+    color: white;
+}
+
+.bouton_lancement_lien {
+    width: 120px;
+    height: 35px;
+    background-color: #5f2c14;
+    border: none;
+    border-radius: 20px;
+    cursor:pointer;
+    scale: 1.2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);;
+    transition: transform 0.3s; /* Ajout d'une transition pour une animation fluide */
+}
+
+.bouton_lancement_lien_hover{
+    transform:scale(1.1);
+}
+
+.div_bouton_lancement{
+    position: relative;
+    
+}
