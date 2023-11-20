@@ -126,5 +126,3 @@ async function hashString(inputString) {
     //console.log(inputString + "=" + hashedValue);
     return hashedValue;
   }
-
-    }, aleatoire()); // temps de chargement en millisecondes aléatoire
