@@ -16,7 +16,6 @@ blocs.forEach(bloc => {
 
 // Sélectionnez tous les éléments avec la classe "bloc_titre"
 const blocs2 = document.querySelectorAll('.bloc_titre');
-
 // Parcourez chaque élément et ajoutez des gestionnaires d'événements pour "hover"
 blocs2.forEach(bloc_titre => {
     bloc_titre.addEventListener('mouseenter', () => {
@@ -31,8 +30,7 @@ blocs2.forEach(bloc_titre => {
 
 
 const bt1 = document.querySelectorAll('.bouton_lien');
-
-// Animation du buton login
+// Animation du bouton login
 bt1.forEach(bouton_lien => {
     bouton_lien.addEventListener('mouseenter', () => {
         bouton_lien.classList.add('bouton_lien_hover');
@@ -43,14 +41,13 @@ bt1.forEach(bouton_lien => {
     });
 });
 
-// Animation du buton de lancement
+// Animation du bouton de lancement
 const bt2 = document.querySelectorAll('.bouton_lancement_lien');
 
 bt2.forEach(bouton_lancement_lien => {
     bouton_lancement_lien.addEventListener('mouseenter', () => {
         bouton_lancement_lien.classList.add('bouton_lancement_lien_hover');
     });
-
     bouton_lancement_lien.addEventListener('mouseleave', () => {
         bouton_lancement_lien.classList.remove('bouton_lancement_lien_hover');
     });
@@ -90,7 +87,7 @@ async function validateLogin() { //Action du bouton login
     if (validCredentials.hasOwnProperty(username_hash) && validCredentials[username_hash] === password_hash) {
         // Authentification réussie, redirigez l'utilisateur vers la page souhaitée
         console.log("Redirection effectuée");
-        //window.location.href = "index.html";
+        window.location.href = "admin.html";
     } else {
         // Affichez un message d'erreur
         document.getElementById("errorText").textContent = "Identifiant ou mot de passe incorrect.";
@@ -124,4 +121,102 @@ async function hashString(inputString) {
     const hashedValue = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
     //console.log(inputString + "=" + hashedValue);
     return hashedValue;
+  }
+
+
+
+//SCRIPT PAGE ADMIN
+
+    // Appelez la fonction lorsque la page est chargée
+    window.onload = mettreAJourRAM;
+    window.onload= mettreAJourGPU('.GPU');
+
+//Génère une valeur aléatoire entre 600 et 1020 et la remplace dans .RAM
+function mettreAJourRAM() {
+  // Sélectionne l'élément div avec la classe "RAM"
+  var divRAM = document.querySelector('.RAM');
+
+  // Met à jour le texte de l'élément toutes les 1 seconde
+  setInterval(function() {
+    // Génère un nombre aléatoire entre 600 et 630
+    var valeurAleatoire = Math.floor(Math.random() * 420) + 600;
+
+    // Remplace le texte de l'élément div par la valeur aléatoire
+    divRAM.textContent = valeurAleatoire;
+  }, 1000); // 1000 millisecondes équivalent à 1 seconde
+}
+
+//Génère une valeur aléatoire entre 10 et 100 et la remplace dans .GPU
+function mettreAJourGPU(selecteur) {
+    // Sélectionne tous les éléments avec la classe spécifiée (par exemple, ".RAM")
+    var elementsRAM = document.querySelectorAll(selecteur);
+  
+    // Met à jour le texte de chaque élément toutes les 1 seconde
+    setInterval(function() {
+      elementsRAM.forEach(function(element) {
+        // Génère un nombre aléatoire entre 600 et 630
+        var valeurAleatoire = Math.floor(Math.random() * 88) + 10;
+  
+        // Remplace le texte de l'élément par la valeur aléatoire
+        element.textContent = valeurAleatoire;
+      });
+    }, 1000); // 1000 millisecondes équivalent à 1 seconde
+  }
+
+
+
+  // Animation du button de controle
+const bt3 = document.querySelectorAll('.button_normal');
+bt3.forEach(button_normal => {
+    button_normal.addEventListener('mouseenter', () => {
+        button_normal.classList.add('button_normal_hover');
+    });
+
+    button_normal.addEventListener('mouseleave', () => {
+        button_normal.classList.remove('button_normal_hover');
+    });
+});
+
+
+
+  // Animation du div flux temp
+  window.onload= anim_flux();
+
+  function anim_flux(){
+    const bf = document.querySelectorAll('#bloc_flux');
+    var num = 0;
+    setInterval(() => {
+        bf.forEach(bloc_flux => {
+                if(num === 0){
+                    bloc_flux.id ='bloc_flux';
+                    num = 1;
+                }
+
+                else{
+                    bloc_flux.id ='bloc_flux_style2';
+                    num = 0;
+                }
+            });
+    }, 500);
+
+
+  }
+
+  window.onload= mettreAJourGPU('.utilisation');
+
+  //Génère une valeur aléatoire entre 120 et 180 et la remplace dans .GPU
+function mettreAJourGPU(selecteur) {
+    // Sélectionne tous les éléments avec la classe spécifiée (par exemple, ".RAM")
+    var elementsRAM = document.querySelectorAll(selecteur);
+  
+    // Met à jour le texte de chaque élément toutes les 1 seconde
+    setInterval(function() {
+      elementsRAM.forEach(function(element) {
+        // Génère un nombre aléatoire entre 600 et 630
+        var valeurAleatoire = Math.floor(Math.random() * 60) + 120;
+  
+        // Remplace le texte de l'élément par la valeur aléatoire
+        element.textContent = valeurAleatoire;
+      });
+    }, 1000); // 1000 millisecondes équivalent à 1 seconde
   }
