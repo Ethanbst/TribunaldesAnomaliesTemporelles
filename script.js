@@ -95,7 +95,9 @@ async function validateLogin() {
     if (validCredentials.hasOwnProperty(username_hash) && validCredentials[username_hash] === password_hash) {
         // Authentification réussie, redirigez l'utilisateur vers la page souhaitée
         console.log("Redirection effectuée");
+
         window.location.href = "admin.html";
+
     } else {
         // Affichez un message d'erreur
         document.getElementById("errorText").textContent = "Identifiant ou mot de passe incorrect.";
