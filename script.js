@@ -162,24 +162,23 @@ function mettreAJourRAM() {
 
 //Génère une valeur aléatoire entre 10 et 100 et la remplace dans .GPU
 function mettreAJourGPU(selecteur) {
-    // Sélectionne tous les éléments avec la classe spécifiée (par exemple, ".RAM")
+    //Sélectionne tous les éléments avec la classe spécifiée (par exemple, ".RAM")
     var elementsRAM = document.querySelectorAll(selecteur);
   
-    // Met à jour le texte de chaque élément toutes les 1 seconde
+    //Met à jour le texte de chaque élément toutes les 1 seconde
     setInterval(function() {
       elementsRAM.forEach(function(element) {
-        // Génère un nombre aléatoire entre 600 et 630
+        //Génère un nombre aléatoire entre 600 et 630
         var valeurAleatoire = Math.floor(Math.random() * 88) + 10;
   
-        // Remplace le texte de l'élément par la valeur aléatoire
+        //Remplace le texte de l'élément par la valeur aléatoire
         element.textContent = valeurAleatoire;
       });
     }, 1000); // 1000 millisecondes équivalent à 1 seconde
   }
 
 
-
-  // Animation du button de controle
+//Animation du button de controle
 const bt3 = document.querySelectorAll('.button_normal');
 bt3.forEach(button_normal => {
     button_normal.addEventListener('mouseenter', () => {
@@ -192,8 +191,7 @@ bt3.forEach(button_normal => {
 });
 
 
-
-  // Animation du div flux temp
+//Animation du div flux temp en boucle
 window.onload= anim_flux();
 function anim_flux(){
     const bf = document.querySelectorAll('#bloc_flux');
@@ -201,22 +199,22 @@ function anim_flux(){
     setInterval(() => {
         bf.forEach(bloc_flux => {
                 if(num === 0){
-                    bloc_flux.id ='bloc_flux';
+                    bloc_flux.id ='bloc_flux'; //On bascule sur le style 1
                     num = 1;
                 }
 
                 else{
-                    bloc_flux.id ='bloc_flux_style2';
+                    bloc_flux.id ='bloc_flux_style2'; //On bascule sur le style 2
                     num = 0;
                 }
             });
     }, 500);
-    }
+}
 
-  window.onload= mettreAJourGPU('.utilisation');
 
 //Génère une valeur aléatoire entre 120 et 180 et la remplace dans .GPU
-function mettreAJourGPU(selecteur) {
+window.onload= mettreAJourUtil('.utilisation');
+function mettreAJourUtil(selecteur) {
     // Sélectionne tous les éléments avec la classe spécifiée (par exemple, ".RAM")
     var elementsRAM = document.querySelectorAll(selecteur);
   
@@ -229,11 +227,11 @@ function mettreAJourGPU(selecteur) {
         // Remplace le texte de l'élément par la valeur aléatoire
         element.textContent = valeurAleatoire;
       });
-    }, 1000); // 1000 millisecondes équivalent à 1 seconde
+    }, 1000); // 1000 millisecondes
   }
 
 
-//Fonction qui lorsqu'on appuie sur le bouton stopper, change le mode display du div de confirmation 
+//Fonction qui lorsqu'on appuie sur le bouton stopper, change le mode display du div de confirmation pour le faire apparaitre
 function stopperonclick(){
     const btstop = document.getElementById('validation');
     btstop.style.display = 'block';
@@ -250,14 +248,14 @@ function nononclick(){
 }
 
 
-//Fonction qui lorsqu'on appuie sur le bouton oui, une zone de texte pour entrer un mod de passe apparaît
+//Fonction qui lorsqu'on appuie sur le bouton oui, affiche le div de zone de texte pour entrer le mod de passe
 function ouionclick(){
     const btoui = document.getElementById('mdp_stop');
     btoui.style.display = 'block';
 }
 
 
-//Action du bouton login
+//Action validation du mont de passe final
 async function validateStop(){
     console.log("Fonction validateStop appelée");
     var password = document.getElementById("confirm_stop").value; //On récupère le mot de passe dans password
@@ -273,24 +271,24 @@ async function validateStop(){
         return; // Arrêtez la fonction si les champs ne sont pas remplis
     }
 
-    // Exemple : Paires identifiant-mot de passe valides
+    //Mot de passe valide
     var validCredentials = "360b757d198055e82eb488e31a3544feb316c64cfed3da5e60504c1fd6f5d0aa";
 
     if (validCredentials === password_hash) {
-        // Authentification réussie, redirigez l'utilisateur vers la page souhaitée
+        //Authentification réussie, suite de la fonction
         console.log("Redirection effectuée");
-        // Attendez 5 secondes avant de masquer l'écran de chargement
+
         var loader = document.getElementById('loader');
-        loader.style.display = 'flex';
-        setTimeout(function() {
+        loader.style.display = 'flex'; //On affiche le div de chargement
+        setTimeout(function() { //On attend 10 secondes
             var loader = document.getElementById('loader');
             loader.style.display = 'none';
-            window.location.href= "https://google.fr";
-        },10000); // temps de chargement en millisecondes aléatoire
+            window.location.href= "https://google.fr"; //Puis on redirige vers google (= fin du jeu)
+        },10000); // temps de chargement en millisecondes
         
     } else {
-        // Affichez un message d'erreur
-        document.getElementById("errorText").style.display = 'block'
+        //Afficher un message d'erreur si mauvais mot de passe
+        document.getElementById("errorText").style.display = 'block' //On affiche le div d'erreur
         document.getElementById("errorText").textContent = "Mot de passe incorrect.";
     }
 }
