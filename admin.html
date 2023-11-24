@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Admministration</title>
     <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
 </head>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="bloc" id="bloc_flux">
-        <h1>Gestion Flux Temporel</h1>
+        <h1>Gestion du Flux Temporel</h1>
         <div class="stats">
         <br><br>
         Utilisation:
@@ -63,10 +63,26 @@
         MODE CONFINEMENT ACTIF
         <br>
             <div class="div_button">
-                <button class="button_normal">Mute</button>
-                <button class="button_normal">Pause</button>
-                <button class="button_normal">Restart</button>
+                <button class="button_normal" id="bouton_stopper" onclick="stopperonclick()">Stopper</button>
             </div>
+            <div id="validation">
+                Êtes-vous sur de vouloir effectuer cette action ?
+                <br>
+                Elle rendra le libre arbitre possible et ne sera pas annulable.
+                <br>
+                <div class="div_button">
+                    <button class="button_normal" id="bouton_stopper" onclick="ouionclick()">OUI</button>
+                </div>
+                <div class="div_button">
+                    <button class="button_normal" id="bouton_stopper" onclick="nononclick()">NON</button>
+                </div>
+                <div id="mdp_stop">
+                    <input type="password" id="confirm_stop" name="confirm_stop" placeholder="Mot de passe" required>
+                </div>
+                <div id="errorText">
+                </div>
+            </div>
+
         </div>
 
     </div>

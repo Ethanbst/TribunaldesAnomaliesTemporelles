@@ -403,3 +403,13 @@ article {
 .utilisation{
     display: inline;
 }
+
+#validation{
+    margin-top: 15px;
+    display: none;
+}
+
+#mdp_stop{
+    margin-top: 15px;
+    display: none;
+}
