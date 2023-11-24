@@ -129,7 +129,7 @@ async function hashString(inputString) {
 //SCRIPT PAGE ADMIN
 
     // Appelez la fonction lorsque la page est chargée
-    window.onload = mettreAJourRAM;
+    window.onload = mettreAJourRAM();
     window.onload= mettreAJourGPU('.GPU');
 
 //Génère une valeur aléatoire entre 600 et 1020 et la remplace dans .RAM
@@ -182,7 +182,6 @@ bt3.forEach(button_normal => {
 
   // Animation du div flux temp
   window.onload= anim_flux();
-
   function anim_flux(){
     const bf = document.querySelectorAll('#bloc_flux');
     var num = 0;
@@ -199,8 +198,6 @@ bt3.forEach(button_normal => {
                 }
             });
     }, 500);
-
-
   }
 
   window.onload= mettreAJourGPU('.utilisation');
