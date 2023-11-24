@@ -290,6 +290,7 @@ async function validateStop(){
         
     } else {
         // Affichez un message d'erreur
+        document.getElementById("errorText").style.display = 'block'
         document.getElementById("errorText").textContent = "Mot de passe incorrect.";
     }
 }
