@@ -121,6 +121,7 @@ setTimeout(function() {
 },aleatoire()); // temps de chargement en millisecondes aléatoire
 
 
+
 // Fonction pour hacher une chaîne
 async function hashString(inputString) {
     // Convertir la chaîne en ArrayBuffer
