@@ -339,3 +339,77 @@ article {
     margin: 80px;
     text-align: center;
 }
+
+/*STYLE PAGE ADMIN*/
+
+.RAM{
+    display: inline;
+}
+
+.GPU{
+    display: inline;
+}
+
+.stats{
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.div_button{
+    justify-content: center;
+    display:inline-flex;
+}
+
+.button_normal {
+    font-weight: bold;
+    color: #ffbc93;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    font-size: 32px;
+    min-width: 100px;
+    min-height: 50px;
+    width:auto;
+    height: auto;
+    margin-top: 20px;
+    background-color: #d56119;
+    border: none;
+    border-radius: 40px;
+    cursor:pointer;
+    scale: 0.7;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+.button_normal_hover{
+    transform:scale(1.2);
+    color: black;
+}
+
+#bloc_flux{
+    /*STYLE DE BASDE*/
+    color: red;
+    transition: 0.5s;
+}
+
+#bloc_flux_style2{
+    background-color: rgb(167, 0, 0);
+    color: whitesmoke;
+    transition: 0.5s;
+}
+
+.utilisation{
+    display: inline;
+}
+
+#validation{
+    margin-top: 15px;
+    display: none;
+}
+
+#mdp_stop{
+    margin-top: 15px;
+    display: none;
+}

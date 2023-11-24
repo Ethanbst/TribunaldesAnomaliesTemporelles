@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admministration</title>
+    <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body >
+    <div id="loader">
+        <div id="loader-text">
+            Chargement en cours...
+        </div>
+        <img id="loading_gif" src="img/loading.gif" >
+    </div>
+    
+    <div class="logo_site">
+        <img src="img/logo_site.png" id="logo" width="500px">
+    </div>
+
+    <a href="index.html">
+        <img src="img/2logoserveur.png" id="imgtva">
+    </a>
+
+    <div class="bloc_titre">
+        <h1>Bienvenue à Celui qui Demeure</h1>
+    </div>
+
+    
+    <div class="bloc" id="guardiens">
+        <h1>Panel de controle des Guardiens du Temps</h1>
+        <div class="stats">
+        <br><br>
+        Mémoire:
+        <p class="RAM"></p>/1024 Go
+        <br><br>
+        Utilisation CPU:
+        <p class="GPU"></p>%
+        <br><br>
+        Utilisation GPU:
+        <p class="GPU"></p>%
+        <br>
+            <div class="div_button">
+                <button class="button_normal">Mute</button>
+                <button class="button_normal">Pause</button>
+                <button class="button_normal">Restart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bloc" id="bloc_flux">
+        <h1>Gestion du Flux Temporel</h1>
+        <div class="stats">
+        <br><br>
+        Utilisation:
+        <p class="utilisation"></p>%
+        <br><br>
+        Risque d'éffrondrement du Flux !
+        <br><br>
+        MODE CONFINEMENT ACTIF
+        <br>
+            <div class="div_button">
+                <button class="button_normal" id="bouton_stopper" onclick="stopperonclick()">Stopper</button>
+            </div>
+            <div id="validation">
+                Êtes-vous sur de vouloir effectuer cette action ?
+                <br>
+                Elle rendra le libre arbitre possible et ne sera pas annulable.
+                <br>
+                <div class="div_button">
+                    <button class="button_normal" id="bouton_stopper" onclick="ouionclick()">OUI</button>
+                </div>
+                <div class="div_button">
+                    <button class="button_normal" id="bouton_stopper" onclick="nononclick()">NON</button>
+                </div>
+                <div id="mdp_stop">
+                    <input type="password" id="confirm_stop" name="confirm_stop" placeholder="Mot de passe" required>
+                </div>
+                <div id="errorText">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+</body>
+</html>
