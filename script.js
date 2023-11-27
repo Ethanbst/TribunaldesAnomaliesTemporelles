@@ -118,7 +118,7 @@ function aleatoire(){
 setTimeout(function() {
     var loader = document.getElementById('loader');
     loader.style.display = 'none';
-},aleatoire()); // temps de chargement en millisecondes aléatoire
+},/*aleatoire()*/); // temps de chargement en millisecondes aléatoire
 
 
 // Fonction pour hacher une chaîne
