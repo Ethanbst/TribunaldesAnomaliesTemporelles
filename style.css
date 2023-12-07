@@ -414,8 +414,60 @@ article {
     display: none;
 }
 
+<<<<<<< HEAD
 #archives{
     position: relative;
     top: -12px;
     scale: 1.0;
+=======
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    overflow: hidden; /* Empêche les blocs de déborder en dehors du conteneur */
+}
+  
+.block {
+    width: 100%;
+    height: 50px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px 0;
+    opacity: 0; /* Initialise l'opacité à 0 pour cacher les blocs au début */
+    transform: translateY(20px); /* Initialise la translation vers le bas pour cacher les blocs au début */
+    transition: opacity 0.5s, transform 0.5s; /* Ajoute une transition pour une animation fluide */
+}
+  
+/* Animation lorsque le bloc entre dans la vue */
+.block.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s
+}
+.block.expanded {
+    height: 200px; /* Ajustez la hauteur souhaitée lorsqu'il est agrandi */
+    transition: 0.5s;
+}
+.content {
+    opacity:0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.content.show {
+    opacity: 1;
+    transition: 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+>>>>>>> Soufian
 }

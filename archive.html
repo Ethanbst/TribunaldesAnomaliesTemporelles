@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Animation déroulante des blocs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="block" onclick="toggleSize(this)">
+          <div class="content">
+            <p>Contenu du bloc 1. Cliquer pour agrandir.</p>
+          </div>
+        </div>
+        <div class="block" onclick="toggleSize(this)">
+          <div class="content">
+            <p>Contenu du bloc 2. Cliquer pour agrandir.</p>
+          </div>
+        </div>
+        <div class="block" onclick="toggleSize(this)">
+          <div class="content">
+            <p>Contenu du bloc 3. Cliquer pour agrandir.</p>
+          </div>
+        </div>
+        <!-- Ajoutez autant de blocs que nécessaire -->
+    </div>
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const blocks = document.querySelectorAll(".block");
+  
+      function showBlocks() {
+        blocks.forEach((block, index) => {
+          setTimeout(() => {
+            block.classList.add("show");
+
+          }, index * 500); // Ajuster la durée entre chaque bloc en millisecondes
+        });
+      }
+  
+      // Déclencher l'animation lorsque la page est entièrement chargée
+      showBlocks();
+    });
+    function toggleSize(element) {
+    element.classList.toggle("expanded");
+
+
+    // Réduire les autres blocs
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach((block) => {
+    if (block !== element && block.classList.contains('expanded')) {
+      block.classList.remove('expanded');
+    }
+    })
+    }
+
+    function toggleContenu(element) {
+    element.classList.toggle("expanded");
+
+
+    // Réduire les autres blocs
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach((block) => {
+    if (block !== element && block.classList.contains('expanded')) {
+      block.classList.remove('expanded');
+    }
+    })
+    }
+
+    </script>
+</body>
+</html>
