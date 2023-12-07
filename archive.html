@@ -9,17 +9,17 @@
 <body>
     <div class="container">
         <div class="block" onclick="toggleSize(this)">
-          <div class="content">
+          <div class="content" onclick="toggleOpacity(this)">
             <p>Contenu du bloc 1. Cliquer pour agrandir.</p>
           </div>
         </div>
         <div class="block" onclick="toggleSize(this)">
-          <div class="content">
+          <div class="content" onclick="toggleOpacity(this)">
             <p>Contenu du bloc 2. Cliquer pour agrandir.</p>
           </div>
         </div>
         <div class="block" onclick="toggleSize(this)">
-          <div class="content">
+          <div class="content" onclick="toggleOpacity(this)">
             <p>Contenu du bloc 3. Cliquer pour agrandir.</p>
           </div>
         </div>
@@ -27,6 +27,7 @@
     </div>
     <script src="script.js"></script>
     <script>
+
     document.addEventListener("DOMContentLoaded", function() {
       const blocks = document.querySelectorAll(".block");
   
@@ -45,12 +46,25 @@
     function toggleSize(element) {
     element.classList.toggle("expanded");
 
-
     // Réduire les autres blocs
     const blocks = document.querySelectorAll('.block');
     blocks.forEach((block) => {
     if (block !== element && block.classList.contains('expanded')) {
       block.classList.remove('expanded');
+    }
+    })
+    }
+
+
+
+    function toggleOpacity(element) {
+    element.classList.toggle("show");
+    
+    // Réduire les autres blocs
+    const blocks = document.querySelectorAll('.content');
+    blocks.forEach((block) => {
+    if (block !== element && block.classList.contains('show')) {
+      block.classList.remove('show');
     }
     })
     }
