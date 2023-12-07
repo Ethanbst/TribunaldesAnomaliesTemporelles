@@ -428,11 +428,12 @@ article {
 .block {
     width: 100%;
     height: 50px;
-    background-color: #3498db;
+    background-color: #5f2c14;
     color: #fff;
     text-align: center;
     line-height: 50px;
     margin: 5px 0;
+    border-radius: 10px;
     opacity: 0; /* Initialise l'opacité à 0 pour cacher les blocs au début */
     transform: translateY(20px); /* Initialise la translation vers le bas pour cacher les blocs au début */
     transition: opacity 0.5s, transform 0.5s; /* Ajoute une transition pour une animation fluide */
@@ -452,14 +453,15 @@ article {
 
 .content {
     opacity:0;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .content.show {
     opacity: 1;
     transition: 0.5s;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    transform: translateY(-50px);
 }

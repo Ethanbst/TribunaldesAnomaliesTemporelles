@@ -8,23 +8,30 @@
 </head>
 <body>
     <div class="container">
+
         <div class="block" onclick="toggleSize(this)">
-          <div class="content" onclick="toggleOpacity(this)">
+          <p>NOM PRENOM</p>
+          <div class="content">
             <p>Contenu du bloc 1. Cliquer pour agrandir.</p>
           </div>
         </div>
+
         <div class="block" onclick="toggleSize(this)">
-          <div class="content" onclick="toggleOpacity(this)">
+          <p>NOM PRENOM</p>
+          <div class="content">
             <p>Contenu du bloc 2. Cliquer pour agrandir.</p>
           </div>
         </div>
+
         <div class="block" onclick="toggleSize(this)">
-          <div class="content" onclick="toggleOpacity(this)">
+          <p>NOM PRENOM</p>
+          <div class="content">
             <p>Contenu du bloc 3. Cliquer pour agrandir.</p>
           </div>
         </div>
-        <!-- Ajoutez autant de blocs que nécessaire -->
+
     </div>
+
     <script src="script.js"></script>
     <script>
 
@@ -43,8 +50,13 @@
       // Déclencher l'animation lorsque la page est entièrement chargée
       showBlocks();
     });
+
+    //Animation des block d'archives
     function toggleSize(element) {
-    element.classList.toggle("expanded");
+    element.classList.toggle("expanded"); //Lorsqu'on clique sur le bloc, l'animation d'étendue s'active
+    
+    const divContent = element.querySelector('.content'); //On récupère le div content du bloc actuel
+    divContent.classList.toggle('show'); //Et on le montre si le div actuel à été cliqué
 
     // Réduire les autres blocs
     const blocks = document.querySelectorAll('.block');
@@ -53,10 +65,18 @@
       block.classList.remove('expanded');
     }
     })
+
+    //Opacité des autres contenu à 0
+    const divContentAll = document.querySelectorAll('.content');
+    divContentAll.forEach((block) => {
+    if (block !== divContent && block.classList.contains('show')) {
+      block.classList.remove('show');
+    }
+    })
     }
 
-
-
+/*
+    //Animation de l'opacité du contenu des archives
     function toggleOpacity(element) {
     element.classList.toggle("show");
     
@@ -67,7 +87,7 @@
       block.classList.remove('show');
     }
     })
-    }
+    }*/
     </script>
 </body>
 </html>
