@@ -414,21 +414,11 @@ article {
     display: none;
 }
 
-<<<<<<< HEAD
 #archives{
     position: relative;
     top: -12px;
     scale: 1.0;
-=======
-
-
-
-
-
-
-
-
-
+}
 
 .container {
     width: 100%;
@@ -454,20 +444,22 @@ article {
     transform: translateY(0);
     transition: 0.5s
 }
+
 .block.expanded {
     height: 200px; /* Ajustez la hauteur souhaitée lorsqu'il est agrandi */
     transition: 0.5s;
 }
+
 .content {
     opacity:0;
     padding: 20px;
     box-sizing: border-box;
     transition: 0.5s;
 }
+
 .content.show {
     opacity: 1;
     transition: 0.5s;
     padding: 20px;
     box-sizing: border-box;
->>>>>>> Soufian
 }
