@@ -427,11 +427,10 @@ article {
   
 .block {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background-color: #5f2c14;
     color: #fff;
-    text-align: center;
-    line-height: 50px;
+    text-align: lieft;
     margin: 5px 0;
     border-radius: 10px;
     opacity: 0; /* Initialise l'opacité à 0 pour cacher les blocs au début */
@@ -443,11 +442,11 @@ article {
 .block.show {
     opacity: 1;
     transform: translateY(0);
-    transition: 0.5s
+    transition: 0.2s
 }
 
 .block.expanded {
-    height: 200px; /* Ajustez la hauteur souhaitée lorsqu'il est agrandi */
+    height: 1000px; /* Ajustez la hauteur souhaitée lorsqu'il est agrandi */
     transition: 0.5s;
 }
 
@@ -455,13 +454,14 @@ article {
     opacity:0;
     padding: 10px;
     box-sizing: border-box;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .content.show {
-    opacity: 1;
-    transition: 0.5s;
+    opacity: 1; 
+    transition: 1s;
     padding: 10px;
     box-sizing: border-box;
     transform: translateY(-50px);
+    font-display:initial;
 }
