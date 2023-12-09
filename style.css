@@ -426,6 +426,7 @@ article {
 }
   
 .block {
+    cursor:pointer;
     width: 100%;
     height: 40px;
     background-color: #5f2c14;
@@ -440,8 +441,8 @@ article {
   
 /* Animation lorsque le bloc entre dans la vue */
 .block.show {
+    margin-bottom: 30px;
     opacity: 1;
-    transform: translateY(0);
     transition: 0.2s
 }
 
